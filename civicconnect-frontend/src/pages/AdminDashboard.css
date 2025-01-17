@@ -1,38 +1,68 @@
-.admin-dashboard {
-  background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/3/294117022/XZ/WR/KC/3365461/71zc8phtzjl-sl1500--500x500.jpg'); /* Adjust path accordingly */
-  background-size: cover;
-  color: #fff;
-  padding: 20px;
-  min-height: 100vh; /* Ensure it covers the full height */
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
 }
 
-table {
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.modal-content textarea {
+  width: 100%;
+  height: 100px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  margin-right: 1rem;
+}
+
+/* Table */
+.issues-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 2rem;
+  
 }
 
-th, td {
-  padding: 10px;
+.issues-table th,
+.issues-table td {
+  border: 1px solid #120101;
+  padding: 0.75rem;
   text-align: left;
-  border: 1px solid #ccc;
 }
 
-th {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+.issues-table th {
+  background-color: #bbb765;
 }
 
-tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1);
+.issues-table button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-p{
-  color: brown;
-  font-size: 25px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.issues-table button:hover {
+  background-color: #0056b3;
 }

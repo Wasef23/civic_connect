@@ -1,22 +1,112 @@
-/* src/components/Navbar.css */
+/* Navbar Container */
 nav {
-    background-color: #003366;
-    padding: 15px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
+  background-color: #003366;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Brand/Title */
+nav h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav h1:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: #00ccff; /* Highlighted color */
+}
+
+/* Navbar Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+/* Links Style */
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ccff; /* Highlighted link color */
+  transform: translateY(-3px); /* Smooth upward movement */
+}
+
+/* Active Link Indicator */
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00ccff;
+  transition: width 0.3s ease;
+  margin: 0 auto;
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+/* Dropdown Animation (Optional) */
+nav ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Links */
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004080;
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li ul li {
+  margin: 5px 0;
+}
+
+nav ul li ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li ul li a:hover {
+  background-color: #00ccff;
+  color: #003366;
+}

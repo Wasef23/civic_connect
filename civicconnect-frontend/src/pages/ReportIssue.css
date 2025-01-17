@@ -1,48 +1,172 @@
-.report-issue-container {
-  background-image: url('https://miro.medium.com/v2/resize:fit:1024/1*w7fSHgKimriL-ryZJ52Uig.png');  /* Add a background image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-}
-
-.form-container {
-  background: rgba(255, 255, 255, 0.8);  /* Transparent white background */
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-h2 {
-  text-align: center;
+/* src/pages/ReportIssue.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
   color: #333;
 }
 
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+.report-issue-page {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #4CAF50;
-  color: white;
+.report-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bb5;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #007bb5;
+  box-shadow: 0 0 5px rgba(0, 123, 181, 0.5);
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bb5;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #45a049;
+.submit-button:hover {
+  background-color: #005f7f;
+}
+/* src/pages/ReportIssue.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #768b9df0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.report-issue-page {
+  max-width: 800px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.report-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0d47a1;
+}
+
+input, select, textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #42a5f5;
+  box-shadow: 0 0 8px rgba(66, 165, 245, 0.6);
+}
+
+.submit-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #1e88e5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .report-issue-page {
+    padding: 15px;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .report-issue-page {
+    padding: 15px;
+  }
 }

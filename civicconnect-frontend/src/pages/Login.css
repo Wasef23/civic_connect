@@ -5,6 +5,7 @@ body {
     background-image: url('https://vityarthi.com/assets/frontend/default-new/image/loginbg.jpg'); /* Update with your image path */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: #333;
 }
 
@@ -16,11 +17,13 @@ body {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px); /* Adds a blur effect for a polished look */
 }
 
 h2 {
     text-align: center;
-    color: #007bff; /* Color for the title */
+    color: #007bff; /* Title color */
+    margin-bottom: 20px;
 }
 
 input {
@@ -30,6 +33,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
@@ -41,6 +45,7 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -50,19 +55,25 @@ button:hover {
 .message {
     color: red;
     text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .register-link {
     text-align: center;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 .link {
     color: #007bff;
     cursor: pointer;
     text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .link:hover {
     text-decoration: none; /* Remove underline on hover */
+    color: #0056b3;
 }
